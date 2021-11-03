@@ -28,4 +28,4 @@ There are 50 rows in the data
 4) How many features (columns) are in the data?
 There are 10 columns in the data
 5) What questions (from above) can be answered using the data in this dataset?
-How many songs are there?  What are the top genre? How many artistst are there? 
+How many songs are there?  What are the top genres? How many artists are there? What is the tempo and energy of the song?

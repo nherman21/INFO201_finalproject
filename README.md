@@ -13,7 +13,19 @@ As typical Spotify users, our group is intrigued by how Spotify’s algorithmic 
 
 **What data-driven questions do you hope to answer about this domain (share at least 3)?**
 1) How does Spotify measure which songs are top songs for the year? 
-Whenever a "qualified user" streams a song more than 30 seconds, Spotify indentifies the song as "played" and tracks how many times it is played. The "qualified user" is a anyone who creats a Spotify account and plays 5 artists. (https://screenrant.com/spotify-wrapped-2020-how-its-made-calculated/#:~:text=To%20power%20new%20elements%20such,at%20least%2030%20different%20songs.)
-2) How does Spotify create a personalized playlist for users? Spotify has an algorithm that groups the similar artist and music you played before in a same playlist. (https://edm.com/features/10-spotify-personalized-playlists)
-3) How does Spotify determine music trends in each music genre? Spotify classify genre thorugh extraction from data and audio frequency. Spotify identifies the X and Y amplitude of frequency of the audio and classify them in catogories. (https://towardsdatascience.com/breaking-spotifys-algorithm-of-music-genre-classification-31ecf8453af1)
+2) How does Spotify create a personalized playlist for users? 
+3) How does Spotify determine music trends in each music genre? 
 
+**Finding Data**
+1) Where did you download the data (e.g., a web URL)?**
+We downloaded the data from Kaggle https://www.kaggle.com/leonardopena/top50spotify2019.
+2) How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?**
+Data were stracted from: http://organizeyourmusic.playlistmachinery.com/
+It was collected by Leonardo Henrique who is a Kaggle expert and data scientist.
+The website helps you organise your music over a wide range of properties. All you need to do is load your playlist into the website and it will categorise it over 14 track properties. The dataset has the properties of the top 50 streamed songs of 2021.
+3) How many observations (rows) are in your data?
+There are 50 rows in the data
+4) How many features (columns) are in the data?
+There are 10 columns
+5) What questions (from above) can be answered using the data in this dataset?
+How many songs are there?  What are the top genre? How many artistst are there? 

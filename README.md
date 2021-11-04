@@ -1,5 +1,7 @@
 # INFO201_finalproject
 
+Contributors: Nicole Herman, Paul Joonyup Sok, Rajeshwari Viswanathan, Annujin Ider
+
 For our INFO 201 Final Project, we are choosing to analyze Spotify's Top Songs.
 
 **Why are you interested in this field/domain?**

@@ -1,0 +1,43 @@
+---
+title: "index"
+author: "Nicole Herman"
+date: "11/17/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#index.Rmd File
+#In the Markdown document you create, you should run the other scripts to generate the necessary content your report:
+
+#Write an introductory paragraph explaining the domain/data set (feel free to borrow from the project proposal)
+#Write a summary paragraph that includes information calculated by your summary information function
+#Render your table and describe pertinent observations found in it
+#Describe the purpose of each chart (e.g., "this chart was intended to show the relationship between..."), render each chart, and describe pertinent observations found in each chart
+
+#Introduction
+As typical Spotify users, our group is interested in how Spotify’s algorithmic technology  chooses the Top Songs in our playlists. Because we interact with this app in a daily basis and we use Spotify's automatic playlists, we have decided to analyze what makes certain songs popular and better than other songs. This includes the analysis of how Spotify makes personalized playlists for us, and how it measures certain trends in songs we play. 
+
+#Summary 
+
+
+
+
+#Table of Data
+
+```{r}
+print(summary_table)
+```
+
+#chart 1
+
+#chart 2
+
+#chart 3
+
+
+
+
+

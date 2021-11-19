@@ -21,6 +21,9 @@ knitr::opts_chunk$set(echo = TRUE)
 As typical Spotify users, our group is interested in how Spotify’s algorithmic technology  chooses the Top Songs in our playlists. Because we interact with this app in a daily basis and we use Spotify's automatic playlists, we have decided to analyze what makes certain songs popular and better than other songs. This includes the analysis of how Spotify makes personalized playlists for us, and how it measures certain trends in songs we play. 
 
 #Summary 
+```{r}
+print(summary_info)
+```
 
 
 

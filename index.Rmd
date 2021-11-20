@@ -42,6 +42,10 @@ print(chart_01)
 
 #chart 2
 
+```{r}
+print(chart_02)
+```
+
 #chart 3
 
 

@@ -1,0 +1,28 @@
+---
+title: "chart 3"
+author: "Paul Joonyup Sok"
+date: "19/11/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+In this chart we are analysing if "speechiness" in a song has an impact on the popularity of the song. Speechiness can be defined by the measure of the presence of words in a song. We selected 10 different songs with a variety of "speechiness" values ranging from 3 to 46.The labels show the popularity for each of the songs. Through this we are able to understand and show that "speechiness" has somewhat of an impact on the popularity of songs.
+
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+library(ggplot2)
+require(RColorBrewer)
+top_50 <- read.csv("top50.csv")
+top_10 <- top50 %>%
+  slice_head(n = 10)
+popularity <- top_10[, 14]
+speech <- top_10[, 13]
+pie(top_10[, 13], labels=popularity, col=brewer.pal(10, "Spectral"))
+legend("topleft", legend=popularity, color=brewer.pal(10, "Spectral")
+       
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

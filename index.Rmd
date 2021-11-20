@@ -48,7 +48,9 @@ print(chart_02)
 
 #chart 3
 
-
+```{r}
+print(chart_03)
+```
 
 
 

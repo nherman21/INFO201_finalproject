@@ -1,0 +1,22 @@
+---
+title: "chart_1"
+author: "Rajeshwari Viswanathan"
+date: "19/11/2021"
+output: html_document
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Here we are analysing the top 20 most popular songs. We can see that in the scatterplot bad guy is the most popular song and 7 rings, It's You and QUE PRETENDES are the least popular songs. There is a tendency for the most popular songs to appear in our playlists and hence it is important to analyse the most streamed songs. 
+
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}}
+Chart_1 <- ggplot(data = top_20, mapping = aes(x = Track.Name, y = Popularity))  + geom_point() + geom_line() + theme(
+  axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) + ggtitle("Top 20 Most Popular Songs")
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

@@ -36,6 +36,10 @@ print(summary_table)
 
 #chart 1
 
+```{r}
+print(chart_01)
+```
+
 #chart 2
 
 #chart 3

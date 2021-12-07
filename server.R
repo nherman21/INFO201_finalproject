@@ -20,5 +20,8 @@ server <- function(input, output) {
     radarchart(radar_table(input$genre))
   })
   
+  
+  
+  
 }
 

@@ -6,21 +6,6 @@ library(plotly)
 
 
 ui <- fluidPage(
-  #using HTML to style 
-  tags$style(HTML("
-     @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;700&family=Poppins:ital,wght@0,300;1,300&family=Quicksand&display=swap');
-      body {
-      font-family: 'Quicksand', sans-serif;
-        background-color: white;
-        text-color: #1DB954;
-        text-align:center; 
-      }
-      h2 {
-        font-family: 'Quicksand', sans-serif;
-      }
-      .shiny-input-container {
-        color: #474747;
-      }")),
   #Introduction Page
   introduction_view <- tabPanel(
     "Introduction",
@@ -35,9 +20,23 @@ ui <- fluidPage(
 http://organizeyourmusic.playlistmachinery.com/
 Overall in this project, we analyzed how each song elements affected how popular the songs were."),
     img(src = "https://i2-prod.bristolpost.co.uk/incoming/article4124115.ece/ALTERNATES/s615/0_Spotify-fundraising.jpg", height = 300, width = 400),
-    img(src = "https://lineup-images.scdn.co/your-top-songs-2019_LARGE-en.jpg", height = 300, width = 300)
+    img(src = "https://lineup-images.scdn.co/your-top-songs-2019_LARGE-en.jpg", height = 300, width = 300),
+    # Note the wrapping of the string in HTML()
+    tags$style(HTML("
+     @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;700&family=Poppins:ital,wght@0,300;1,300&family=Quicksand&display=swap');
+      body {
+        background-color: #C6E2C6;
+        color: #444444;
+        text-align:center; 
+      }
+      h2 {
+        font-family: 'Quicksand', sans-serif;
+      }
+      .shiny-input-container {
+        color: #474747;
+      }")),
+    
   ),
-  
   
   #page 1   
   page1_view <- tabPanel(

@@ -1,4 +1,4 @@
-# INFO201_finalproject
+## INFO201_finalproject
 
 Contributors: Nicole Herman, Paul Joonyup Sok, Rajeshwari Viswanathan, Anuujin Ider
 

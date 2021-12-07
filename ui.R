@@ -6,6 +6,21 @@ library(plotly)
 
 
 ui <- fluidPage(
+  #using HTML to style 
+  tags$style(HTML("
+     @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;700&family=Poppins:ital,wght@0,300;1,300&family=Quicksand&display=swap');
+      body {
+      font-family: 'Quicksand', sans-serif;
+        background-color: white;
+        text-color: #1DB954;
+        text-align:center; 
+      }
+      h2 {
+        font-family: 'Quicksand', sans-serif;
+      }
+      .shiny-input-container {
+        color: #474747;
+      }")),
   #Introduction Page
   introduction_view <- tabPanel(
     "Introduction",
@@ -19,8 +34,8 @@ ui <- fluidPage(
   To learn more about the details of the data, please visit: 
 http://organizeyourmusic.playlistmachinery.com/
 Overall in this project, we analyzed how each song elements affected how popular the songs were."),
-    img(src = "spotify_image2.png", height = 300, width = 400),
-    img(src = "spotify_image1.png", height = 300, width = 300)
+    img(src = "https://i2-prod.bristolpost.co.uk/incoming/article4124115.ece/ALTERNATES/s615/0_Spotify-fundraising.jpg", height = 300, width = 400),
+    img(src = "https://lineup-images.scdn.co/your-top-songs-2019_LARGE-en.jpg", height = 300, width = 300)
   ),
   
   
@@ -30,12 +45,16 @@ Overall in this project, we analyzed how each song elements affected how popular
     titlePanel("Analyzing Top Genres"),
     p("We are going to explore the top genres in this page. 
     We want to find out the average song elements
-    in each top genres."),
+    in each top genres; the radar chart with 
+    the following average music elements displayed
+    will allow us to see which elements
+    makes the genres popular.
+      "),
     
     sidebarPanel(selectInput(
       inputId = "genre",
       label = "Select a Genre: ",
-      choices = summary_table$top_genre
+      choices = summary_table_2$top_genre
     )),
     mainPanel(
       tableOutput("table"),
@@ -52,4 +71,6 @@ ui <- navbarPage(
   page1_view
   
 )
+
+
 

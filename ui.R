@@ -1,3 +1,34 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+
+@anuujini 
+nherman21
+/
+  INFO201_finalproject
+Public
+1
+00
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+INFO201_finalproject/ui.R
+@nherman21
+nherman21 page 1 and 3 done
+Latest commit 191a331 34 minutes ago
+History
+2 contributors
+@nherman21@anuujini
+141 lines (114 sloc)  6.12 KB
+
 library(shiny)
 library(dplyr)
 library(fmsb)
@@ -59,8 +90,8 @@ page1_view <- tabPanel(
   )
   
 )
-#UI Page 2
 
+#UI Page 2
 page2_view <- tabPanel(
   "Page 2",
   titlePanel("Popularity vs. Danceability"),
@@ -70,7 +101,6 @@ page2_view <- tabPanel(
     inputId = "danceability",
     label = "Select a danceability score: ",
     choices = summary_table_3$top_genre
-    
     
   )),
   tags$style(HTML("
@@ -87,9 +117,8 @@ page2_view <- tabPanel(
         color: #474747;
       }")),
   mainPanel(
-    plotOutput("danceability")
+    plotOutput("line")
   ))
-
 
 #UI Page 3
 page3_view <- tabPanel(
@@ -158,7 +187,7 @@ ui <- navbarPage(
   "Spotify's Top Songs",
   introduction_view,
   page1_view,
-  page2_view,
+  #page2_view,
   page3_view,
   summary_view
 )

@@ -4,8 +4,7 @@ library(fmsb)
 library(plotly)
 library(ggplot2)
 
-
-server <- function(input, output) 
+server <- function(input, output) {
   #server for page 1
   radar_table <- function(genre){
     
@@ -35,6 +34,8 @@ server <- function(input, output)
                                                                                                              , y=pg2_plot$average_popularity), col="blue")
   })
   
+  
+  
   #page 3
   # radar_table <- function(genre){
   #   rd_df <- select(summary_table_4, -c(top_genre))
@@ -45,8 +46,7 @@ server <- function(input, output)
     ggplot(summary_table_4) + geom_point(aes(x=average_length, y=average_beats_per_minute)) + geom_point(aes(x=pg3_plot$average_length
                                                                                                              , y=pg3_plot$average_beats_per_minute), col="red")
     
-  })
+  })}
   # output$table <- renderTable({
   
   # })
-  

@@ -1,34 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
-
-@anuujini 
-nherman21
-/
-  INFO201_finalproject
-Public
-1
-00
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-INFO201_finalproject/ui.R
-@nherman21
-nherman21 page 1 and 3 done
-Latest commit 191a331 34 minutes ago
-History
-2 contributors
-@nherman21@anuujini
-141 lines (114 sloc)  6.12 KB
-
 library(shiny)
 library(dplyr)
 library(fmsb)

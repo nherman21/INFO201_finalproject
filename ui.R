@@ -69,7 +69,7 @@ page3_view <- tabPanel(
     between the genre and how long their song and beats per minute usually is."),
   sidebarPanel(selectInput(
     inputId = "genre_1",
-    label = "Select a genre: ",
+    label = "Select a Genre (the selected genre will be a red point on the graph): ",
     choices = summary_table_4$top_genre
       
 

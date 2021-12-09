@@ -37,8 +37,10 @@ server <- function(input, output) {
   # }
  
   output$line <- renderPlot({
-    
-    ggplot(summary_table_4) + geom_point(aes(x=average_length, y=average_beats_per_minute)) 
+    pg3_plot <- filter(summary_table_4, top_genre == input$genre_1)
+    ggplot(summary_table_4) + geom_point(aes(x=average_length, y=average_beats_per_minute)) + geom_point(aes(x=pg3_plot$average_length
+                                                                                                             , y=pg3_plot$average_beats_per_minute), col="red")
+
   })
   # output$table <- renderTable({
 

@@ -14,6 +14,5 @@ summary_info$energy_min_value <- music_data %>%
 summary_info$dance_avg_value <- music_data %>%
   summarise(mean(Danceability,trim = 0, na.rm = T ))
 summary_info$num_features <- ncol(music_data)
-  
- 
+
 

@@ -12,3 +12,4 @@ summary_table_2 <- music_data %>%
             average_loudness = round(mean(Loudness..dB..), digits = 0),
             average_valence = round(mean(Valence.), digits = 0)) %>% 
   arrange(-average_danceability, -average_energy, -average_liveness, -average_loudness, -average_valence)
+

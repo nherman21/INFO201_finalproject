@@ -64,12 +64,31 @@ Overall in this project, we analyzed how each song elements affected how popular
   
 )
 
+#page 2  
+page2_view <- tabPanel(
+  "Page 2",
+  titlePanel("Causes of Popularity"),
+  p("We are going to explore the causes of popularity in this page. 
+    We want to find out the average song danceability and popularity; 
+    the following chart with will allow us to analyse the realtionship between 
+    danceability vs popularity.
+      "),
+  
+  sidebarPanel(selectInput(
+    inputId = "danceability",
+    label = "Select Danceability Score: ",
+    choices = music_data$Danceability
+  )),
+  mainPanel(
+    tableOutput("table_2"),
+    plotOutput("chart_2")
+  ))
+
 ui <- navbarPage(
   "Spotify's Top Songs",
   introduction_view,
-  page1_view
-  
+  page1_view,
+  page2_view
 )
-
 
 

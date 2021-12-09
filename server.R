@@ -70,6 +70,9 @@ server <- function(input, output){
   output$table <- renderTable({
     filter(summary_table_4, top_genre == input$genre)
   })
+  summary_table_4 <- reactive({summary_table_4() %>% 
+      filter(input == input$genre)})
+    
 }
 
 

@@ -1,4 +1,3 @@
-
 library(shiny)
 library(dplyr)
 library(fmsb)
@@ -36,10 +35,11 @@ Overall in this project, we analyzed how each song elements affected how popular
         color: #474747;
       }")),
     
-  ),
+  ))
   
-  #page 1   
-  page1_view <- tabPanel(
+  #UI page 1   
+  ui <- fluidPage(  
+    page1_view <- tabPanel(
     "Page 1",
     titlePanel("Analyzing Top Genres"),
     p("We are going to explore the top genres in this page. 
@@ -64,31 +64,89 @@ Overall in this project, we analyzed how each song elements affected how popular
   
 )
 
-#page 2  
-page2_view <- tabPanel(
-  "Page 2",
-  titlePanel("Causes of Popularity"),
-  p("We are going to explore the causes of popularity in this page. 
+  
+  #UI page 2  
+  page2_view <- tabPanel(
+    "Page 2",
+    titlePanel("Causes of Popularity"),
+    p("We are going to explore the causes of popularity in this page. 
     We want to find out the average song danceability and popularity; 
     the following chart with will allow us to analyse the realtionship between 
     danceability vs popularity.
       "),
+    
+    sidebarPanel(selectInput(
+      inputId = "danceability",
+      label = "Select Danceability Score: ",
+      choices = music_data$Danceability
+    )),
+    mainPanel(
+      tableOutput("table_2"),
+      plotOutput("chart_2")
+    ))
   
-  sidebarPanel(selectInput(
-    inputId = "danceability",
-    label = "Select Danceability Score: ",
-    choices = music_data$Danceability
-  )),
-  mainPanel(
-    tableOutput("table_2"),
-    plotOutput("chart_2")
-  ))
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+#UI Page 3
+ui <- fluidPage(
+  page3_view <- tabPanel(
+    "Page 3",
+    titlePanel("Top Genres vs. Their Average Song Length & Average B.P.M."),
+    p("In this page, we are going to look at a line chart that shows us a top genre, following
+    with its average song length and beats per minute. This line chart will allow us to see if there is a trend 
+    between the genre and how long their song and beats per minute usually is."),
+    sidebarPanel(selectInput(
+      inputId = "genre",
+      label = "Select a genre: ",
+      choices = summary_table_4$top_genre
+    )),
+    tags$style(HTML("
+     @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;700&family=Poppins:ital,wght@0,300;1,300&family=Quicksand&display=swap');
+      body {
+        background-color: #C6E2C6;
+        color: #444444;
+        text-align:center; 
+      }
+      p{
+        font-family: 'Quicksand', sans-serif;
+      }
+      .shiny-input-container {
+        color: #474747;
+      }")),
+    mainPanel(
+      plotOutput("line")
+    )
+    
+  
+  
+  
+))
+
+
+
+
+
 
 ui <- navbarPage(
   "Spotify's Top Songs",
   introduction_view,
   page1_view,
-  page2_view
+  page2_view,
+  page3_view
 )
+
 
 

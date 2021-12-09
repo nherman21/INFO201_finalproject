@@ -68,9 +68,11 @@ page3_view <- tabPanel(
     with its average song length and beats per minute. This line chart will allow us to see if there is a trend 
     between the genre and how long their song and beats per minute usually is."),
   sidebarPanel(selectInput(
-    inputId = "genre",
+    inputId = "genre_1",
     label = "Select a genre: ",
     choices = summary_table_4$top_genre
+      
+
   )),
   tags$style(HTML("
      @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;700&family=Poppins:ital,wght@0,300;1,300&family=Quicksand&display=swap');

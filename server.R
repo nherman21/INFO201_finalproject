@@ -37,9 +37,8 @@ server <- function(input, output) {
   # }
  
   output$line <- renderPlot({
-    genre_df <- filter(summary_table_4, top_genre == input$genre)
     
-    ggplot(genre_df) + geom_point(aes(x=average_length, y=average_beats_per_minute)) 
+    ggplot(summary_table_4) + geom_point(aes(x=average_length, y=average_beats_per_minute)) 
   })
   # output$table <- renderTable({
 

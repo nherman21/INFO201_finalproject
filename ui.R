@@ -65,10 +65,10 @@ page2_view <- tabPanel(
   "Page 2",
   titlePanel("Popularity vs. Danceability"),
   p("We are going to analyze the relationship between 
-    danceability vs popularity."),
+    danceability vs popularity to see if there is positive correlation"),
   sidebarPanel(selectInput(
     inputId = "danceability",
-    label = "Select a danceability score: ",
+    label = "Select a genre: ",
     choices = summary_table_3$top_genre
     
   )),
@@ -86,7 +86,7 @@ page2_view <- tabPanel(
         color: #474747;
       }")),
   mainPanel(
-    plotOutput("line")
+    plotOutput("danceability")
   ))
 
 #UI Page 3
@@ -156,7 +156,7 @@ ui <- navbarPage(
   "Spotify's Top Songs",
   introduction_view,
   page1_view,
-  #page2_view,
+  page2_view,
   page3_view,
   summary_view
 )

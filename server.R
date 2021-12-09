@@ -31,7 +31,8 @@ server <- function(input, output) {
   output$danceability <- renderPlot({
     pg2_plot <- filter(summary_table_3, top_genre == input$genre_1)
     ggplot(summary_table_3) + geom_point(aes(x=average_danceability, y=average_popularity)) + geom_point(aes(x=pg2_plot$average_danceability
-                                                                                                             , y=pg2_plot$average_popularity), col="blue")
+                                                                                                             , y=pg2_plot$average_popularity), col="blue")+
+      ggtitle("Average Popularity vs. Average Danceability") + xlab("Average Danceability") + ylab("Average Popularity")
   })
   
   
@@ -43,8 +44,9 @@ server <- function(input, output) {
   
   output$line <- renderPlot({
     pg3_plot <- filter(summary_table_4, top_genre == input$genre_1)
-    ggplot(summary_table_4) + geom_point(aes(x=average_length, y=average_beats_per_minute)) + geom_point(aes(x=pg3_plot$average_length
-                                                                                                             , y=pg3_plot$average_beats_per_minute), col="red")
+    ggplot(summary_table_4) + geom_point(aes(x=average_length, y=average_beats_per_minute)) + 
+      geom_point(aes(x=pg3_plot$average_length, y=pg3_plot$average_beats_per_minute), col="red")+
+      ggtitle("Top Genre vs. Their Average Song Length & Average B.P.M") + xlab("Average Length of Song") + ylab("Average Beats per Minute")
     
   })}
   # output$table <- renderTable({
